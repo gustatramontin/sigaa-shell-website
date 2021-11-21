@@ -1,0 +1,73 @@
+
+.body {
+    background-color: #fafafa;
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.login {
+    align-self: center;
+    margin: auto 0;
+
+    display: flex;
+    flex-flow: column wrap;
+    background-color: white;
+    box-shadow: var(--shadow);
+
+    width: 30rem;
+
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.login h2 {
+    font-size: 1.8rem;
+}
+
+.login form {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 2.2rem;
+}
+
+.login form input {
+    height: 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.login form input:focus-visible {
+    outline: 2px solid var(--green);
+}
+
+.login form .input {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-flow: column;
+}
+
+.login form .input label {
+    font-size: 1.2rem;
+}
+
+.login form .checkbox {
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 1rem;
+}
+
+.login form .checkbox input {
+    height: auto;
+    color: black;
+    margin-right: 0.5rem;
+}
+
+.login form input[type="submit"] {
+    background-color: var(--green);
+    color: white;
+}
+

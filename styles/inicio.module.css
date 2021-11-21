@@ -1,0 +1,152 @@
+.body {
+    background-color: #fafafa;
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 100vw;
+
+    padding: 2rem 5rem;
+}
+
+.news_div {
+    padding: 0rem;
+    max-width: 100vw;
+}
+
+.news_div h2 {
+    font-size: clamp(1.3rem, 1.7vw,1.7vw);
+    margin-bottom: calc(2rem - 0.5rem);
+}
+
+.news_container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    max-height: 20vh;
+    overflow-y: hidden;
+
+}
+
+.news {
+    background-color: white;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-flow: column wrap;
+    /*margin: 1rem 1rem 1rem 0;*/
+    padding: 1rem;
+    border-radius: 5px;
+    width: auto;
+    transition: box-shadow .2s;
+    cursor: url("/assets/link.svg"), auto;
+}
+
+.news:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.news h3 {
+    text-transform: capitalize;
+    font-size: clamp(1rem,1.25vw,1.25vw);
+
+    font-weight: bold;
+
+}
+
+.news p {
+    font-size: clamp(0.8rem,1.1vw,1.1vw);
+    font-weight: 300;
+    color:var(--text-color);
+    opacity: 0.9;
+    margin: 0.5rem 0;
+}
+
+.news_date {
+    font-weight: 300;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.65;
+    margin-top: auto;
+}
+
+.newsOpen {
+    max-height: initial;
+}
+
+.toggle_news {
+    padding: 0.5rem;
+
+    border: 1px solid var(--text-color-10);
+
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.toggle_news:active {
+    background-color: rgb(231, 231, 231);
+}
+
+.actvis_div {
+    margin-top: 2rem;
+}
+
+.actvis_container {
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+.activity {
+    background-color: white;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 100%;
+
+    transition: box-shadow .2s;
+
+}
+
+.activity:hover {
+    box-shadow: var(--shadow-hover);
+    cursor: pointer;
+}
+
+.activity h3 {
+    text-transform: capitalize;
+    font-size: clamp(1rem, 1.25vw, 1.25vw);
+    font-weight: bold;
+}
+
+.activity p {
+    font-size: clamp(0.8rem, 1.1vw,1.1vw);
+    font-weight: 300;
+    margin: 0.5rem 0;
+}
+
+@media only screen and (max-width: 650px) {
+    .body {
+        padding: 2rem 2rem;
+    }
+    
+    .news_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .news_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
